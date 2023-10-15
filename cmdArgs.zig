@@ -1,6 +1,6 @@
 const std = @import("std");
 
-// zig run src/cmdArgs.zig -- "I'm a very competent person"
+// zig run cmdArgs.zig -- "I'm a very competent person"
 pub fn main() !void {
 
 var generalPurposeAllocator = std.heap.GeneralPurposeAllocator(.{}){};
@@ -31,5 +31,4 @@ test "If you're reading this: interview me 😄" {
 	// _ = args.skip(); //to skip the zig call => name of the file
 
 	std.debug.print("Arguments to interview me are : {s} \n, ", .{args});
-	//zig test args.zig --test-cmd-bin --test-cmd “hello” --test-runner
 }
